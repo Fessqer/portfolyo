@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222222;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(180, 17, 17);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(207, 23, 23);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(32, 32, 32);
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.fas {
+  color: rgb(185, 26, 26);
+}
+
+.sidebar {
+  background-color: rgb(27, 27, 27);
+  width: 250px;
+  min-width: 250px;
+  height: 100%;
+  border-right: 2px solid rgb(46, 46, 46);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  left: 0px;
+}
+
+.sidebar .social-media ul {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.sidebar .social-media ul li a {
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+  border-radius: 100%;
+  border-radius: 100%;
+  /* filter: drop-shadow(0px 0px 2px red); */
+  /* border: 2px solid rgba(255, 0, 0, 0.712); */
+  transition: all 0.4s;
+}
+
+.sidebar .social-media ul li a:hover {
+  filter: drop-shadow(0px 0px 5px rgb(255, 0, 0));
+}
+
+.logo-img {
+  width: 150px;
+  height: 150px;
+  min-height: 150px;
+  background-image: url("img/bio.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid rgba(255, 255, 255, 0.205);
+  border-radius: 100%;
+  transition: all 0.4s;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.copyright {
+  font-size: 12px;
+}
+
+.copyright::before {
+  content: "";
+  padding: 4px 2px;
+  border-radius: 3px 0;
+  margin-right: 5px;
+  width: 5px;
+  height: 5px;
+  background-color: red;
+}
+
+.sidebar .menu ul {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 420px;
+}
+
+.sidebar .menu ul li {
+  display: block;
+  width: 220px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid rgb(37, 37, 37);
+  border-radius: 4px;
+  transition: border-color 0.5s;
+}
+
+.sidebar .menu ul li:hover {
+  border-color: red;
+  filter: drop-shadow(0px 0px 5px rgb(149, 3, 3));
+}
+
+.sidebar .menu ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* MAİN CONTENT */
+
+.main-content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 25px;
+}
+
+.title {
+  font-size: 17px;
+  color: #eee;
+  margin: 10px;
+}
+
+.title::before {
+  content: "";
+  padding: 4px 2px;
+  border-radius: 3px 0;
+  margin-right: 5px;
+  width: 5px;
+  height: 5px;
+  background-color: red;
+}
+
+.details {
+  padding: 15px;
+}
+
+.box {
+  background-color: rgb(35, 35, 35);
+  border-radius: 4px;
+  padding: 25px;
+  transition: all 0.4s;
+  border: 1px solid rgb(41, 41, 41);
+  margin: 10px 0 10px;
+}
+
+.box ul {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 15px;
+  padding: 15px;
+}
+
+.box ul li .wrapper {
+  width: 100%;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.box ul li .dil {
+  font-size: 15px;
+  padding: 5px;
+}
+
+.box ul li .dil span::before {
+  content: "%";
+  padding: 2px;
+  font-size: 16px;
+  color: gray;
+}
+
+.box ul li .dil::before {
+  content: "#";
+  padding: 5px;
+  font-size: 16px;
+  color: gray;
+}
+
+.box ul li .wrapper .ilerleme {
+  width: 90%;
+  height: 10px;
+  /* background-color: rgb(84, 18, 172); */
+  background-color: rgb(72, 18, 221);
+}
+
+#about li {
+  font-size: 16px;
+  color: gray;
+}
+
+#about li span {
+  font-size: 16px;
+}
+
+#about li::before {
+  content: "#";
+  padding: 5px;
+  font-size: 16px;
+  color: rgb(197, 94, 10);
+}
+
+#about li span::before {
+  content: ": ";
+  padding: 5px;
+  font-size: 16px;
+  color: rgb(197, 94, 10);
+}
+
+.soz {
+  font-size: 12px;
+  background-color: rgb(47, 47, 47);
+}
+
+#contact li {
+  font-size: 16px;
+  color: gray;
+}
+
+#contact li span {
+  font-size: 16px;
+}
+
+#contact li::before {
+  content: "#";
+  padding: 5px;
+  font-size: 16px;
+  color: rgb(197, 94, 10);
+}
+
+#contact li span::before {
+  content: ": ";
+  padding: 5px;
+  font-size: 16px;
+  color: rgb(197, 94, 10);
+}
+
+#announcements {
+  display: block;
+}
+
+#announcements li {
+  margin: 5px;
+  background-color: rgb(32, 32, 32);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#announcements li .title {
+  font-size: 16px;
+  color: gray;
+}
+
+#announcements li .title::before {
+  content: "";
+  width: 0;
+  height: 0;
+  padding: 0;
+}
+
+#buttons li {
+  padding: 5px;
+  background-color: rgb(111, 0, 255);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+#buttons li:hover {
+  background-color: rgb(95, 8, 209);
+  border-radius: 5px;
+  border-color: white;
+}
+
+#buttons li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger {
+  position: absolute;
+  z-index: 15;
+  right: 50px;
+  top: 50px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger #close {
+  display: none;
+}
+
+.hamburger label {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+}
+#menu-toggle:checked ~ .container .hamburger label #bars {
+  display: none;
+}
+
+#menu-toggle:checked ~ .container .hamburger label #close {
+  display: block;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+
+  .container .sidebar {
+    display: block;
+    position: absolute;
+    transform: translateX(-350px);
+    transition: all 0.8s;
+  }
+
+  #menu-toggle:checked ~ .container .sidebar {
+    transform: translateX(0px);
+  }
+}
